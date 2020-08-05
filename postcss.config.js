@@ -8,7 +8,7 @@ module.exports = {
             "./src/**/*.html",
             "./src/**/*.vue",
             "./src/**/*.js",
-            "./src/**/*.sass"
+            "./src/**/*.scss"
           ]
         })
       : ""
