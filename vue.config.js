@@ -1,6 +1,7 @@
 const manifestJSON = require("./public/manifest.json");
 
 module.exports = {
+  publicPath: process.env.NODE_ENV === 'production' ? process.env.CI_PROJECT_NAME.trim() || '/' : '/',
   css: {
     loaderOptions: {
       sass: {

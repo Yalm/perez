@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --modern",
+    "build:github": "set CI_PROJECT_NAME=/perez && vue-cli-service build --modern --dest docs",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
