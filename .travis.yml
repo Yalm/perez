@@ -5,7 +5,7 @@ node_js:
 cache: npm
 
 env:
-    - DB=/perez
+    - CI_PROJECT_NAME=/perez
 script: npm run build
 
 deploy:
