@@ -20,14 +20,7 @@
                 <a
                   class="nav-link d-flex align-items-center"
                   href="tel:998308772"
-                  @click="
-                    $ga.ga('send', 'event', {
-                      eventCategory: 'Call',
-                      eventAction: 'click',
-                      eventLabel: 'Link',
-                      eventValue: 'phone'
-                    })
-                  "
+                  @click="clickPhone"
                 >
                   <i class="material-icons mr-1">phone_android</i> 998308772
                 </a>
@@ -36,6 +29,7 @@
                 <a
                   class="nav-link d-flex align-items-center"
                   href="mailto:factoriagruasperez@gmail.com"
+                  @click="clickPhone"
                 >
                   <i class="material-icons mr-1">mail_outline</i
                   >factoriagruasperez@gmail.com
@@ -105,8 +99,10 @@
 </template>
 
 <script>
+import call from '../mixins/call';
 export default {
   name: "Header",
+  mixins: [call],
   data: () => ({
     showNavigation: false,
     headerAbsoulte: false,

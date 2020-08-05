@@ -193,10 +193,11 @@
 
 <script>
 import Carousel from "@/components/CarouselComponent.vue";
-
+import call from '../mixins/call';
 export default {
   name: "Home",
   components: { Carousel },
+  mixins: [call],
   data: () => ({
     services: [
       {

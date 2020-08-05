@@ -20,8 +20,10 @@
   </div>
 </template>
 <script>
+import call from '../mixins/call';
 export default {
   name: "MobileButtons",
+  mixins: [call],
   methods: {
     clickWhatsapp() {
       this.$ga.event({
@@ -29,14 +31,6 @@ export default {
         eventAction: "click",
         eventLabel: "Call Whatsapp",
         eventValue: "whatsapp"
-      });
-    },
-    clickPhone() {
-      this.$ga.event({
-        eventCategory: "call",
-        eventAction: "click",
-        eventLabel: "Call Phone",
-        eventValue: "phone"
       });
     }
   }

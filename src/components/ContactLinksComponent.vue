@@ -7,11 +7,13 @@
         <a
           href="tel:998308772"
           class="material-icons no-link text-primary rounded-circle p-3 mr-2"
+          @click="clickPhone"
           >phone_in_talk</a
         >
         <a
           href="tel:998308772"
           class="phone_contact text-white text-decoration-none"
+          @click="clickPhone"
           >+51 998 308 772</a
         >
       </li>
@@ -39,6 +41,13 @@
     </ul>
   </div>
 </template>
+<script>
+import call from '../mixins/call';
+export default {
+  name: "ContactLinks",
+  mixins: [call]
+};
+</script>
 <style lang="scss" scoped>
 .contact_about {
   background-color: #4e52cf;
